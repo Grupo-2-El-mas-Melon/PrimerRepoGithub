@@ -27,4 +27,16 @@ Verifica que solo te queda el MAIN => `git branch` y solo saldrá:
     * main
 ```
 (EN CASO DE ERROR, forzar con `git branch -D RamaDesarrolloFrontRocio`)
+Posiblemente si no borramos todas las ramas nos de error a la hora de trabajar en equipo, para borrar totalmente la rama debemos de hacer lo siguiente => `git push origin --delete RamaDesarrolloFrontRocio`
 
+SI DA ESTE ERROR:
+```bash
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Grupo-2-El-mas-Melon/PrimerRepoGithub'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+SE SOLUCIONA CON => `git pull origin main  --allow-unrelated-histories`
+y luego =>  `git push`
